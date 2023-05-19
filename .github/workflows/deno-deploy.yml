@@ -26,4 +26,4 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "nitro-starter"
-          entrypoint: ".output/server/index.ts" # 📝 Update the entrypoint
+          entrypoint: "./.output/server/index.ts" # 📝 Update the entrypoint
