@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nitro dev",
+    "build:vercel-edge": "NITRO_PRESET=vercel-edge nitro build",
+    "build:netlify-edge": "NITRO_PRESET=netlify-edge nitro build",
+    "preview": "node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "@starnexus/core": "^0.0.7-beta.3",
+    "@starnexus/web-hub": "^0.0.7-beta.3",
+    "@vercel/kv": "^0.2.1",
+    "nitropack": "latest",
+    "ofetch": "^1.0.1",
+    "satori": "^0.8.1",
+    "satori-html": "^0.3.2",
+    "unfurl.js": "^6.3.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.38.6",
+    "eslint": "^8.40.0",
+    "typescript": "^5.0.4"
+  }
+}

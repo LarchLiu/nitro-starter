@@ -1,0 +1,9 @@
+[build.environment]
+  NODE_VERSION = "16"
+
+[build]
+  publish = "dist"
+  command = "pnpm run build:netlify-edge"
+
+[edge_functions]
+  directory = ".netlify/edge-functions"
