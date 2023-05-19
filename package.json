@@ -4,6 +4,7 @@
     "dev": "nitro dev",
     "build:vercel-edge": "NITRO_PRESET=vercel-edge nitro build",
     "build:netlify-edge": "NITRO_PRESET=netlify-edge nitro build",
+    "build:deno": "NITRO_PRESET=deno nitro build",
     "preview": "node .output/server/index.mjs"
   },
   "dependencies": {
