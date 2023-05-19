@@ -5,5 +5,5 @@
   publish = "dist"
   command = "pnpm run build:netlify-edge"
 
-[edge_functions]
-  directory = ".netlify/edge-functions"
+[functions]
+  directory = ".netlify/edge-functions/"
