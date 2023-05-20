@@ -3,6 +3,7 @@
   "packageManager": "pnpm@8.5.1",
   "scripts": {
     "dev": "nitro dev",
+    "build": "nitro build",
     "build:vercel-edge": "NITRO_PRESET=vercel-edge nitro build",
     "build:netlify-edge": "NITRO_PRESET=netlify-edge nitro build",
     "build:deno": "NITRO_PRESET=deno nitro build",

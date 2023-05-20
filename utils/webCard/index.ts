@@ -10,20 +10,19 @@ export async function createWebCard(webInfo: WebInfoData): Promise<StorageImage>
   try {
     const webMeta = webInfo.meta
     let imgPath = ''
-    let meta
     let card = ''
     let svg = ''
     let png: Blob | undefined
     const res = await unfurl(webInfo.url)
 
     if (webMeta.siteName === 'Github') {
-      meta = webMeta as GithubRepoMeta
+      const meta = webMeta as GithubRepoMeta
       imgPath = `${webMeta.domain}/${meta.username}/${meta.reponame}.png`
       if (res.open_graph && res.open_graph.images)
         png = await $fetch(res.open_graph.images[0].url, { responseType: 'blob' })
     }
     else if (webMeta.siteName === 'Twitter') {
-      meta = webMeta as TwitterTweetMeta
+      const meta = webMeta as TwitterTweetMeta
       const screenName = meta.screenName!
       const status = meta.status!
       imgPath = `${webMeta.domain}/${screenName}/${status}.svg`
@@ -34,7 +33,7 @@ export async function createWebCard(webInfo: WebInfoData): Promise<StorageImage>
       if (contentArr.length > 7)
         contentArr = contentArr.slice(0, 8)
 
-      card = TweetCard(meta.avatar, meta.name, meta.screenName, contentArr, meta.pubTime, meta.lang)
+      card = TweetCard(meta.avator, meta.name, meta.screenName, contentArr, meta.pubTime, meta.lang)
     }
     else {
       const content = webInfo.content || res.description || 'No Content'
