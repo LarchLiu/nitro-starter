@@ -1,3 +1,6 @@
+import { kv } from '@vercel/kv'
+import { TG_CONFIG, TG_TOKENS, tgEnvDefault } from '../../../utils/tgBot/env'
+
 export default eventHandler(async (event) => {
   const result: Record<string, any> = {}
   const body = await readBody(event)
@@ -17,15 +20,15 @@ export default eventHandler(async (event) => {
   const url = `${domain}/api/telegram/${token}/webhook`
   const id = token.split(':')[0]
   result[id] = {
-    // webhook: await bindTelegramWebHook(token, url).catch(e => e.message),
+    webhook: await bindTelegramWebHook(token, url).catch(e => e.message),
     command: await bindCommandForTelegram(token).catch(e => e.message),
   }
-  // if (result[id].webhook.result) {
-  //   const env = JSON.parse(JSON.stringify(tgEnvDefault))
-  //   TG_TOKENS()[token] = botName
-  //   TG_CONFIG()[token] = env
-  //   await kv.set(CONST.TOKENS_KEY, TG_TOKENS())
-  //   await kv.set(CONST.CONFIG_KEY, TG_CONFIG())
-  // }
+  if (result[id].webhook.result) {
+    const env = JSON.parse(JSON.stringify(tgEnvDefault))
+    TG_TOKENS()[token] = botName
+    TG_CONFIG()[token] = env
+    await kv.set(CONST.TOKENS_KEY, TG_TOKENS())
+    await kv.set(CONST.CONFIG_KEY, TG_CONFIG())
+  }
   return result[id]
 })
