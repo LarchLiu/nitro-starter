@@ -93,7 +93,7 @@ export function sendChatActionToTelegramWithContext(context: Context) {
 
 export async function bindTelegramWebHook(token: string, url: string) {
   return await fetch(
-      `${ENV.TELEGRAM_API_DOMAIN}/bot${token}/setWebhook`,
+      `https://api.telegram.org/bot${token}/setWebhook`,
       {
         method: 'POST',
         headers: {
