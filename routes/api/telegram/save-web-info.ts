@@ -6,8 +6,8 @@ import { SummarizeContent } from '@starnexus/core/openai'
 import { errorMessage } from '@starnexus/core/utils'
 import { routes } from '@starnexus/web-hub'
 import { SaveWebInfoChain } from '@starnexus/core/chain/saveWebInfo'
-import type { UserConfig } from '../../utils/tgBot/makeChain'
-import type { Context } from '../../utils/tgBot/context'
+import type { UserConfig } from '../../../utils/tgBot/makeChain'
+import type { Context } from '../../../utils/tgBot/context'
 
 export default eventHandler(async (event) => {
   const body = await readBody(event)
