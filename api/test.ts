@@ -1,3 +1,6 @@
 export default eventHandler(async (event) => {
-  return 'test ok'
+  const req = await readBody<{ webUrl: string }>(event)
+  const webUrl = req.webUrl
+
+  return webUrl
 })
