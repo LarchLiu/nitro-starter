@@ -1,8 +1,9 @@
 // server/api/webcard.ts
 
-import { errorMessage, storageInfo } from '@starnexus/core'
-import type { IDataStorage, IImageStorage, TStorage, WebInfoData } from '@starnexus/core'
-import { createWebCard } from '../utils/webCard'
+import { errorMessage } from '@starnexus/core/utils'
+import { storageInfo } from '@starnexus/core/storage'
+import type { WebInfoData } from '@starnexus/core'
+import type { IDataStorage, IImageStorage, TStorage } from '@starnexus/core/storage'
 
 export default eventHandler(async (event) => {
   try {

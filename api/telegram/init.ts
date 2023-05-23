@@ -1,7 +1,5 @@
 import { kv } from '@vercel/kv'
-import { CONST, TG_CONFIG, TG_TOKENS, initEnv, tgEnvDefault } from '../../utils/tgBot/env'
-import { bindCommandForTelegram } from '../../utils/tgBot/command'
-import { bindTelegramWebHook } from '../../utils/tgBot/telegram'
+import { TG_CONFIG, TG_TOKENS, tgEnvDefault } from '../../utils/tgBot/env'
 
 export default eventHandler(async (event) => {
   const result: Record<string, any> = {}

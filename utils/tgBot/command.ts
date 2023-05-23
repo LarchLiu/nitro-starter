@@ -1,12 +1,12 @@
 import { kv as KV } from '@vercel/kv'
-import { mergeConfig } from './utils'
+import { mergeConfig } from '../../utils/tgBot/utils'
 import {
   getChatRoleWithContext,
   sendMessageToTelegramWithContext,
-} from './telegram'
+} from '../../utils/tgBot/telegram'
 
-import type { Context } from './context'
-import { CONST, ENV, I18N, TG_CONFIG } from './env'
+import type { Context } from '../../utils/tgBot/context'
+import { CONST, ENV, I18N, TG_CONFIG } from '../../utils/tgBot/env'
 
 type ScopeType = 'all_private_chats' | 'all_group_chats' | 'all_chat_administrators'
 type CommandType = '/help' | '/new' | '/start' | '/setenv' | '/delenv' | '/system' | '/adduser' | '/deluser'
@@ -42,7 +42,7 @@ const commandAuthCheck = {
     }
     return false
   },
-  mustCreator(chatType: string) {
+  mustCreator(_chatType: string) {
     return ['creator']
   },
 }

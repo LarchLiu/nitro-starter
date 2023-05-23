@@ -1,5 +1,5 @@
 import { kv } from '@vercel/kv'
-import { CONST, TG_CONFIG, initEnv } from '../../utils/tgBot/env'
+import { TG_CONFIG } from '../../utils/tgBot/env'
 
 export default eventHandler(async (event) => {
   const body = await readBody(event)
