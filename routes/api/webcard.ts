@@ -1,8 +1,6 @@
 // server/api/webcard.ts
 
 import { errorMessage } from '@starnexus/core/utils'
-import { SupabaseImageStorage } from '@starnexus/core/storage/supabase'
-import type { IImageStorage } from '@starnexus/core/storage'
 
 export default eventHandler(async (event) => {
   try {
@@ -15,7 +13,7 @@ export default eventHandler(async (event) => {
       savedData,
     } = await readBody(event)
     // let imgRes: SavedImage
-    const imgStorage = new SupabaseImageStorage(imgCfg) as IImageStorage
+    // const imgStorage = new SupabaseImageStorage(imgCfg) as IImageStorage
     // const dataStorage = new NotionDataStorage(dataCfg) as IDataStorage
     // const res = await createWebCard(webData as WebInfoData)
     // // const imgQuery = await imgStorage.query(res.imgPath)
