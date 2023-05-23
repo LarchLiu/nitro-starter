@@ -5,19 +5,12 @@
     "dev": "nitro dev",
     "build": "nitro build",
     "build:vercel": "NITRO_PRESET=vercel-edge nitro build",
-    "build:netlify-edge": "NITRO_PRESET=netlify-edge nitro build",
+    "build:netlify": "NITRO_PRESET=netlify-edge nitro build",
     "build:deno": "NITRO_PRESET=deno nitro build",
     "preview": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "@starnexus/core": "^0.0.7-beta.4",
-    "@starnexus/web-hub": "^0.0.7-beta.4",
-    "@supabase/supabase-js": "^2.22.0",
-    "@vercel/kv": "^0.2.1",
-    "ofetch": "^1.0.1",
-    "satori": "^0.8.1",
-    "satori-html": "^0.3.2",
-    "unfurl.js": "^6.3.2"
+    "@starnexus/core": "^0.0.7-beta.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.6",

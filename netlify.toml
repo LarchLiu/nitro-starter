@@ -3,7 +3,7 @@
 
 [build]
   publish = "dist"
-  command = "pnpm run build:netlify-edge"
+  command = "pnpm run build:netlify"
 
 [functions]
   directory = ".netlify/edge-functions/"
