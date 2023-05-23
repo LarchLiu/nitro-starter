@@ -2,7 +2,8 @@
 
 import { errorMessage } from '@starnexus/core/utils'
 import type { WebInfoData } from '@starnexus/core'
-import { NotionDataStorage, SupabaseImageStorage } from '@starnexus/core'
+import { SupabaseImageStorage } from '@starnexus/core/storage/supabase'
+import { NotionDataStorage } from '@starnexus/core/storage/notion'
 import type { IDataStorage, IImageStorage } from '@starnexus/core/storage'
 
 export default eventHandler(async (event) => {
