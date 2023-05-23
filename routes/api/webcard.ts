@@ -23,10 +23,10 @@ export default eventHandler(async (event) => {
     // if (imgQuery.url)
     //   imgRes = await imgStorage.update(res)
     // else
-    const imgRes = await imgStorage.create(res)
+    // const imgRes = await imgStorage.create(res)
 
-    const updateRes = await dataStorage.updateOgImage(savedData, imgRes.url)
-    return updateRes
+    // const updateRes = await dataStorage.updateOgImage(savedData, imgRes.url)
+    return res
   }
   catch (error: any) {
     setResponseStatus(event, 400)
