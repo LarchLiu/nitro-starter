@@ -5,7 +5,7 @@ export default eventHandler(async (event) => {
   const result: Record<string, any> = {}
   const body = await readBody(event)
   await initEnv()
-  const domain = `https://${getRequestHost(event)}`
+  const domain = 'https://nitro-starter-vert.vercel.app/'
   const token = body.tgToken.trim()
   const botName = body.botName
   const test = /(\d+:[A-Za-z0-9_-]{35})/.test(token)
