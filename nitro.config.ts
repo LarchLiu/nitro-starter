@@ -1,6 +1,7 @@
 import { defineNitroConfig } from 'nitropack/config'
-import { visualizer } from 'rollup-plugin-visualizer'
-import vue from '@vitejs/plugin-vue'
+
+// import { visualizer } from 'rollup-plugin-visualizer'
+// import vue from '@vitejs/plugin-vue'
 
 const envVars = [
   'SUPABASE_URL', 'SUPABASE_STORAGE_BUCKET', 'SUPABASE_OG_IMAGE', 'SUPABASE_ANON_KEY',
@@ -13,17 +14,21 @@ export default defineNitroConfig({
       target: 'esnext',
     },
   },
+  prerender: {
+    crawlLinks: false,
+    routes: ['/'],
+  },
   // storage: {
   //   data: { driver: 'vercelKV' },
   // },
   // for deno
   rollupConfig: {
     plugins: [
-      vue(),
-      visualizer({
-        emitFile: true,
-        filename: 'stats.html',
-      }),
+      // vue(),
+      // visualizer({
+      //   emitFile: true,
+      //   filename: 'stats.html',
+      // }),
       // replace({
       //   preventAssignment: true,
       //   values: {
