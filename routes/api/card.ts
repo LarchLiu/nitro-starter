@@ -1,7 +1,7 @@
 // server/api/webcard.ts
 
-import { errorMessage } from '@starnexus/core/utils'
-import { SupabaseImageStorage } from '@starnexus/core/storage/supabase'
+import { errorMessage } from '@stargram/core/utils'
+import { SupabaseImageStorage } from '@stargram/core/storage/supabase'
 
 export default eventHandler(async (event) => {
   try {
