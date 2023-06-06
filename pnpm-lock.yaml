@@ -1,9 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
-  '@starnexus/core':
-    specifier: ^0.0.7-beta.4
-    version: 0.0.7-beta.4(@supabase/supabase-js@2.22.0)(ofetch@1.0.1)
+  '@stargram/core':
+    specifier: ^0.0.7
+    version: 0.0.7(@supabase/supabase-js@2.22.0)(ofetch@1.0.1)
   '@supabase/supabase-js':
     specifier: ^2.22.0
     version: 2.22.0
@@ -634,8 +634,8 @@ packages:
       rollup: 3.22.0
     dev: true
 
-  /@starnexus/core@0.0.7-beta.4(@supabase/supabase-js@2.22.0)(ofetch@1.0.1):
-    resolution: {integrity: sha512-fgyE8ZXbVYBGEeBDQz6DB1v4L4Sq1p1AGBHHU9VHbg47PhTOqrmB06mfeRoaf/z1zreNiYCKSvKnlAgL8GaqEw==}
+  /@stargram/core@0.0.7(@supabase/supabase-js@2.22.0)(ofetch@1.0.1):
+    resolution: {integrity: sha512-lFRiQC+xBakXa1NcSrxaKcYuk4dYBzFcptPQDt5hmtFb6dnkSrbriNfGRmr1RApSs9g8TetAv+ln7egGc3BhVg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@supabase/supabase-js': ^2.22.0
